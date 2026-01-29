@@ -1,0 +1,71 @@
+/* Graphically Recursive Simultaneous Task Allocation, Planning,
+ * Scheduling, and Execution
+ *
+ * Modeling and Optimizing the Provisioning of Exhaustible Capabilities
+ * for Simultaneous Task Allocation and Scheduling
+ *
+ * Author: Andrew Messing
+ * Author: Glen Neville
+ * Author: Jinwoo Park
+ *
+ * Copyright (C) 2020–2023 Andrew Messing
+ * Copyright (C) 2020–2023 Glen Neville
+ * Copyright (C) 2026 Jinwoo Park
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+#pragma once
+
+// Global
+#include <concepts>
+#include <memory>
+
+// Local
+#include "traits/common/search/search_node_base.hpp"
+#include "traits/common/utilities/noncopyable.hpp"
+
+namespace traits
+{
+    /*!
+     * \brief An interface for defining how to determine if two nodes are the same
+     *
+     * \tparam SearchNode A derivative of SearchNodeBase
+     */
+    template <SearchNodeDeriv SearchNode>
+    class MemoizationBase : private Noncopyable
+    {
+    public:
+        //! \returns An identifier for \p node
+        [[nodiscard]] virtual unsigned int operator()(const std::shared_ptr<const SearchNode>& node) const = 0;
+
+        //! \returns Whether \p lhs and \p rhs have the same identifier (representing they are the same node)
+        [[nodiscard]] virtual bool equal(const std::shared_ptr<const SearchNode>& lhs,
+                                         const std::shared_ptr<const SearchNode>& rhs) const
+        {
+            return operator()(lhs) == operator()(rhs);
+        }
+
+    protected:
+        MemoizationBase() = default;
+    };
+
+    /*!
+     * \brief
+     *
+     * \tparam T
+     * \tparam SearchNode
+     */
+    template <typename T, typename SearchNode>
+    concept MemoizationDeriv = std::derived_from<T, MemoizationBase<SearchNode>>;
+}  // namespace traits
