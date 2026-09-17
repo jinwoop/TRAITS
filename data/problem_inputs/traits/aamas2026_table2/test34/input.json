@@ -1,0 +1,1030 @@
+{
+  "species": [
+    {
+      "name": "Husky_Slow_Rate_Large_Capacity",
+      "traits_max": [
+        187.0,
+        0.0,
+        0.0
+      ],
+      "trait_rates_max": [
+        4.774,
+        0.0,
+        0.0
+      ],
+      "traits_provisionable": [
+        1,
+        1,
+        0
+      ],
+      "traits_exhaustible": [
+        1,
+        1,
+        1
+      ],
+      "current_trait_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_trait_rate_functions_coeff": [
+        0.021,
+        0.0,
+        0.0
+      ],
+      "max_battery_capacity": 10.0,
+      "max_possible_current": 0.23988712688673297,
+      "idle_current": 0.1,
+      "speed": 1.0,
+      "speed_coeff": 0.15,
+      "peukert_coeff": 1.1,
+      "bounding_radius": 7.5,
+      "mp_index": 0
+    },
+    {
+      "name": "Husky",
+      "traits_max": [
+        93.5,
+        0.0,
+        0.0
+      ],
+      "trait_rates_max": [
+        9.548,
+        0.0,
+        0.0
+      ],
+      "traits_provisionable": [
+        1,
+        1,
+        0
+      ],
+      "traits_exhaustible": [
+        1,
+        1,
+        1
+      ],
+      "current_trait_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_trait_rate_functions_coeff": [
+        0.021,
+        0.0,
+        0.0
+      ],
+      "max_battery_capacity": 72000.0,
+      "max_possible_current": 0.6572656752885736,
+      "idle_current": 0.1,
+      "speed": 1.0,
+      "speed_coeff": 0.15,
+      "peukert_coeff": 1.1,
+      "bounding_radius": 7.5,
+      "mp_index": 0
+    },
+    {
+      "name": "Jackal_Slow_Rate_Large_Capacity",
+      "traits_max": [
+        0.0,
+        143.0,
+        0.0
+      ],
+      "trait_rates_max": [
+        0.0,
+        4.716,
+        0.0
+      ],
+      "traits_provisionable": [
+        1,
+        1,
+        0
+      ],
+      "traits_exhaustible": [
+        1,
+        1,
+        1
+      ],
+      "current_trait_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_trait_rate_functions_coeff": [
+        0.0,
+        0.026,
+        0.0
+      ],
+      "max_battery_capacity": 10.0,
+      "max_possible_current": 0.2691577833163911,
+      "idle_current": 0.1,
+      "speed": 2.0,
+      "speed_coeff": 0.15,
+      "peukert_coeff": 1.05,
+      "bounding_radius": 5.0,
+      "mp_index": 0
+    },
+    {
+      "name": "Jackal",
+      "traits_max": [
+        0.0,
+        71.5,
+        0.0
+      ],
+      "trait_rates_max": [
+        0.0,
+        9.433,
+        0.0
+      ],
+      "traits_provisionable": [
+        1,
+        1,
+        0
+      ],
+      "traits_exhaustible": [
+        1,
+        1,
+        1
+      ],
+      "current_trait_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_trait_rate_functions_coeff": [
+        0.0,
+        0.026,
+        0.0
+      ],
+      "max_battery_capacity": 40500.0,
+      "max_possible_current": 1.1539046775744075,
+      "idle_current": 0.1,
+      "speed": 2.0,
+      "speed_coeff": 0.15,
+      "peukert_coeff": 1.05,
+      "bounding_radius": 5.0,
+      "mp_index": 0
+    },
+    {
+      "name": "Impotent",
+      "traits_max": [
+        0.0,
+        0.0,
+        133.9794330702693
+      ],
+      "trait_rates_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "traits_provisionable": [
+        1,
+        1,
+        0
+      ],
+      "traits_exhaustible": [
+        1,
+        1,
+        1
+      ],
+      "current_trait_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_trait_rate_functions_coeff": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_battery_capacity": 10.0,
+      "max_possible_current": 0.2691577833163911,
+      "idle_current": 0.1,
+      "speed": 2.0,
+      "speed_coeff": 0.15,
+      "peukert_coeff": 1.05,
+      "bounding_radius": 5.0,
+      "mp_index": 0
+    }
+  ],
+  "robots": [
+    {
+      "name": "HSRLC-0",
+      "initial_battery_level": 0.99,
+      "initial_trait_levels": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 300.0,
+        "y": 200.0,
+        "yaw": 0.0
+      },
+      "species": "Husky_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "HSRLC-1",
+      "initial_battery_level": 0.926,
+      "initial_trait_levels": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 300.0,
+        "y": 380.0,
+        "yaw": 0.0
+      },
+      "species": "Husky_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "HSRLC-2",
+      "initial_battery_level": 0.529,
+      "initial_trait_levels": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 460.0,
+        "y": 110.0,
+        "yaw": 0.0
+      },
+      "species": "Husky_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "HSRLC-3",
+      "initial_battery_level": 0.399,
+      "initial_trait_levels": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.0,
+        "y": 200.0,
+        "yaw": 0.0
+      },
+      "species": "Husky_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "H-0",
+      "initial_battery_level": 0.585,
+      "initial_trait_levels": [
+        0.598,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 380.0,
+        "y": 20.0,
+        "yaw": 0.0
+      },
+      "species": "Husky"
+    },
+    {
+      "name": "H-1",
+      "initial_battery_level": 0.925,
+      "initial_trait_levels": [
+        0.708,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 140.0,
+        "y": 110.0,
+        "yaw": 0.0
+      },
+      "species": "Husky"
+    },
+    {
+      "name": "H-2",
+      "initial_battery_level": 0.95,
+      "initial_trait_levels": [
+        0.827,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.0,
+        "y": 290.0,
+        "yaw": 0.0
+      },
+      "species": "Husky"
+    },
+    {
+      "name": "H-3",
+      "initial_battery_level": 0.376,
+      "initial_trait_levels": [
+        0.217,
+        0.0,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.0,
+        "y": 110.0,
+        "yaw": 0.0
+      },
+      "species": "Husky"
+    },
+    {
+      "name": "JSRLC-0",
+      "initial_battery_level": 0.94,
+      "initial_trait_levels": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 220.0,
+        "y": 50.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "JSRLC-1",
+      "initial_battery_level": 0.817,
+      "initial_trait_levels": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 340.0,
+        "y": 20.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "JSRLC-2",
+      "initial_battery_level": 0.564,
+      "initial_trait_levels": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 60.0,
+        "y": 290.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "JSRLC-3",
+      "initial_battery_level": 0.738,
+      "initial_trait_levels": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 260.0,
+        "y": 110.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal_Slow_Rate_Large_Capacity"
+    },
+    {
+      "name": "J-0",
+      "initial_battery_level": 0.818,
+      "initial_trait_levels": [
+        0.0,
+        0.204,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 140.0,
+        "y": 200.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal"
+    },
+    {
+      "name": "J-1",
+      "initial_battery_level": 0.927,
+      "initial_trait_levels": [
+        0.0,
+        0.314,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 420.0,
+        "y": 290.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal"
+    },
+    {
+      "name": "J-2",
+      "initial_battery_level": 0.699,
+      "initial_trait_levels": [
+        0.0,
+        0.519,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 540.0,
+        "y": 20.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal"
+    },
+    {
+      "name": "J-3",
+      "initial_battery_level": 0.229,
+      "initial_trait_levels": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 20.0,
+        "y": 110.0,
+        "yaw": 0.0
+      },
+      "species": "Jackal"
+    },
+    {
+      "name": "I-0",
+      "initial_battery_level": 0.69,
+      "initial_trait_levels": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 220.0,
+        "y": 200.0,
+        "yaw": 0.0
+      },
+      "species": "Impotent"
+    },
+    {
+      "name": "I-1",
+      "initial_battery_level": 0.603,
+      "initial_trait_levels": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.0,
+        "y": 170.0,
+        "yaw": 0.0
+      },
+      "species": "Impotent"
+    },
+    {
+      "name": "I-2",
+      "initial_battery_level": 0.421,
+      "initial_trait_levels": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 20.0,
+        "y": 290.0,
+        "yaw": 0.0
+      },
+      "species": "Impotent"
+    },
+    {
+      "name": "I-3",
+      "initial_battery_level": 0.988,
+      "initial_trait_levels": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.0,
+        "y": 20.0,
+        "yaw": 0.0
+      },
+      "species": "Impotent"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "TASK-0",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        0.0,
+        1.474,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        0.0,
+        8.593,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 500.325,
+        "y": 20.597,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 500.325,
+        "y": 20.597,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-1",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        4.441,
+        0.0,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        8.822,
+        0.0,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 420.833,
+        "y": 51.973,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 420.833,
+        "y": 51.973,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-2",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        4.582,
+        0.0,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        5.082,
+        0.0,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 60.797,
+        "y": 110.454,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 60.797,
+        "y": 110.454,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-3",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        0.0,
+        2.429,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        0.0,
+        8.931,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 540.158,
+        "y": 21.425,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 540.158,
+        "y": 21.425,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-4",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        2.053,
+        0.0,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        8.073,
+        0.0,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.985,
+        "y": 230.965,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 620.985,
+        "y": 230.965,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-5",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        3.832,
+        0.0,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        6.359,
+        0.0,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 541.64,
+        "y": 380.922,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 541.64,
+        "y": 380.922,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-6",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        0.0,
+        2.723,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        0.0,
+        8.461,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 621.136,
+        "y": 351.963,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 621.136,
+        "y": 351.963,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-7",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        0.0,
+        3.269,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        0.0,
+        8.765,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 21.096,
+        "y": 170.215,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 21.096,
+        "y": 170.215,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-8",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        4.462,
+        0.0,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        6.313,
+        0.0,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 501.365,
+        "y": 290.606,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 501.365,
+        "y": 290.606,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "TASK-9",
+      "duration": 1.0,
+      "static_duration": 1.0,
+      "desired_traits": [
+        0.0,
+        1.818,
+        0.0
+      ],
+      "minimum_trait_rates": [
+        0.0,
+        9.137,
+        0.0
+      ],
+      "traits_aggregatable": [
+        1,
+        0,
+        1
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 580.117,
+        "y": 21.282,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 580.117,
+        "y": 21.282,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    }
+  ],
+  "plan_task_indicies": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "precedence_constraints": [
+    [
+      2,
+      5
+    ]
+  ],
+  "deadline_constraints": [
+    {
+      "deadline_type": "absolute_deadline",
+      "bound": 535.568325805664,
+      "timepoint": {
+        "timepoint_type": "completion",
+        "task": 3
+      }
+    },
+    {
+      "deadline_type": "relative_deadline",
+      "bound": 170.2236755371094,
+      "predecessor": {
+        "timepoint_type": "completion",
+        "task": 9
+      },
+      "successor": {
+        "timepoint_type": "start",
+        "task": 1
+      }
+    }
+  ],
+  "motion_planners": [
+    {
+      "environment_parameters": {
+        "config_type": "PgmOmplEnvironment",
+        "configuration_type": "ompl",
+        "ompl_environment_type": "pgm",
+        "use_data_dir": true,
+        "yaml_filepath": "/geometric_planning/maps/warehouse_4_by_3.yaml"
+      },
+      "algorithm_parameters": {
+        "config_type": "OmplMotionPlannerParameters",
+        "ompl_mp_algorithm": "prm",
+        "timeout": 10.0,
+        "simplify_path": true,
+        "simplify_path_timeout": -1.0,
+        "configuration_type": "ompl"
+      },
+      "config_type": "OmplMotionPlanner"
+    }
+  ],
+  "traits_parameters": {
+    "config_type": "BestFirstSearchParameters",
+    "has_timeout": true,
+    "timeout": 800.0,
+    "timer_name": "traits",
+    "alpha": 0.5,
+    "gamma": 0.5,
+    "prune_before_eval": true,
+    "save_pruned_nodes": false,
+    "save_closed_nodes": false
+  },
+  "trait_distribution_parameters": {
+    "config_type": "trait_distribution_parameters",
+    "timeout": 1.5,
+    "nlp_timeout": 1.0,
+    "threads": 0
+  },
+  "scheduler_parameters": {
+    "config_type": "TraitsMilpSchedulerParameters",
+    "scheduler_type": "milp",
+    "milp_scheduler_type": "deterministic",
+    "timeout": 130.0,
+    "milp_timeout": 120.0,
+    "threads": 0,
+    "compute_transition_duration_heuristic": false,
+    "use_hierarchical_objective": true
+  }
+}

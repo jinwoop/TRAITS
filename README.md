@@ -62,6 +62,79 @@ about). You are responsible for your own gurobi license.
 
 We use [OMPL](https://ompl.kavrakilab.org/) as one of our options for solving motion planning problems.
 
+## Table 2 benchmark
+
+`data/problem_inputs/traits/aamas2026_table2` holds the 100 instances used to compare TRAITS
+against ITAGS: `K, N in {5, 10, 15, 20, 25}` tasks and robots, four instances per cell. Both
+planners read the same file.
+
+### Running
+
+Put your own `gurobi.lic` in `docker/gurobi`, then:
+
+```bash
+docker build -t traits -f docker/Dockerfiles/amd64/Dockerfile .
+docker run --rm -it \
+    -v "$PWD":/work \
+    -v "$PWD/docker/gurobi/gurobi.lic":/opt/gurobi/gurobi.lic:ro \
+    -w /work traits bash
+
+# inside the container
+cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build
+cmake --build build --target unittests --parallel
+cd build/tests
+./unittests --gtest_filter=TRAITS.aamas2026_table2
+```
+
+The test writes one solution per instance to `build/aamas2026_table2/` and a per-instance
+`table2_traits.csv`. A full run takes a few hours; to check the setup first:
+
+```bash
+TRAITS_TABLE2_FIRST=1 TRAITS_TABLE2_LAST=4 ./unittests --gtest_filter=TRAITS.aamas2026_table2
+```
+
+### Results
+
+| row | TRAITS | ITAGS |
+|---|---|---|
+| plan feasibility [%] | 100.0 | 57.9 |
+| task trait insufficiency [%] | 0.0 | 11.4 |
+| provisioning rate insufficiency [%] | 0.0 | 41.8 |
+| under-resourced robots [%] | 0.0 | 26.6 |
+| C-rating violations [%] | 0.0 | 48.7 |
+| battery-capacity violations [%] | 0.0 | 28.6 |
+| deadline violations [%] | 0.0 | 7.3 |
+
+TRAITS solves all 100 instances. Score a run yourself with:
+
+```bash
+python3 python/score_table2.py aamas2026_table2                       # TRAITS
+python3 python/score_table2.py <itags_output_dir> --planner itags      # ITAGS
+```
+
+Each instance is given an 800 s search budget, comfortably above the longest any of them
+took in a run where all 100 solved. The NLP trait distributor has a 1 s timeout of its
+own, so the search is not bit-reproducible: an instance can be reported infeasible on
+one run and solved on the next. Re-run anything marginal rather than reading it as a
+failure.
+
+### Generating new instances
+
+The numbers above come from the fixed set in `data/problem_inputs/traits/aamas2026_table2`,
+which is shipped as data so that everyone scores the same 100 scenarios. To try the planner
+on fresh problems instead, `python/aamas2026_table2_generator.py` samples a new set of the
+same shape - four scenarios for each (tasks, robots) pair from {5, 10, 15, 20, 25}:
+
+```bash
+cd python && python3 aamas2026_table2_generator.py --out my_set --seed 1234
+TRAITS_TABLE2_DIR=/problem_inputs/traits/my_set ./unittests --gtest_filter=TRAITS.aamas2026_table2
+python3 python/score_table2.py my_set
+```
+
+A generated set is solvable but loosely bounded: its deadlines and current ceilings are
+sampled, not fitted to a plan, so the baseline comparison in the table above will not
+reproduce on it. It is a source of new problems, not a regeneration of the benchmark.
+
 # Citations
 
 ### [Forward Chaining Hierarchical Partial-Order Planning](http://robotics.cs.rutgers.edu/wafr2020/wp-content/uploads/sites/7/2020/05/WAFR_2020_FV_43.pdf)

@@ -1048,3 +1048,5 @@ gurobi.lic
 # documentation
 docs/html
 docs/latex
+# benchmark run output
+/aamas2026_table2/
