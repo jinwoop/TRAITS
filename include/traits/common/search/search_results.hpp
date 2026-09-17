@@ -71,6 +71,11 @@ namespace traits
         [[nodiscard]] bool foundGoal() const
         {
             const auto& _m_goal = std::dynamic_pointer_cast<const TraitsIncrementalTaskAllocationNode>(m_goal);
+            // The search returns a null goal when it exhausts the open set or hits its timeout
+            // without ever reaching a goal node.
+            if (_m_goal == nullptr) {
+                return false;
+            }
             if (_m_goal->taskTraitAllocation() == nullptr || _m_goal->schedule() == nullptr) {
                 return false;
             }
@@ -110,6 +115,17 @@ namespace traits
         void writeToFile(const std::string& filepath, const std::shared_ptr<const TraitsProblemInputs>& problem_inputs) const
         {
             nlohmann::json j;
+
+            if(m_goal == nullptr)
+            {
+                // Nothing was found; record that rather than dereferencing a null goal.
+                j[constants::k_full_solution] = false;
+                j[constants::k_solution]      = nullptr;
+                j[constants::k_statistics]    = m_statistics->serializeToJson(problem_inputs);
+                std::ofstream out(filepath);
+                out << std::setw(4) << j << std::endl;
+                return;
+            }
 
             TraitsZeroAprCheck goal_checker(problem_inputs);
             if(goal_checker.operator()(m_goal))

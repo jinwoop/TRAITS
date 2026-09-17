@@ -41,6 +41,11 @@ namespace traits
 
     bool TraitsZeroAprCheck::operator()(const std::shared_ptr<const TraitsIncrementalTaskAllocationNode>& node) const
     {
+        // The search hands back a null node when it exhausts the open set or times out.
+        if (node == nullptr) {
+            return false;
+        }
+
         // A
         const Eigen::MatrixXf& allocation = node->allocation();
 
@@ -64,6 +69,11 @@ namespace traits
     std::vector<float> TraitsZeroAprCheck::tasksCompletionStatus(
             const std::shared_ptr<const TraitsIncrementalTaskAllocationNode> &node) const
     {
+        // The search hands back a null node when it exhausts the open set or times out.
+        if (node == nullptr) {
+            return std::vector<float>();
+        }
+
         // A
         const Eigen::MatrixXf& allocation = node->allocation();
 
